@@ -25,7 +25,7 @@ void setup()
 
     // Sets up the feedback servo
     servo.setServoControl(SERVO_PIN);
-    servo.setKp(0.01);
+    servo.setKp(1);
     Serial.begin(115200);
 }
 
