@@ -57,8 +57,8 @@ void setup()
 
     // Sets up the feedback servo
     myServo.attach(SERVO_PIN);
-    myServo.write(180);
-    delay(10000);
+    myServo.write(197);
+    delay(1000);
 }
 
 
@@ -116,11 +116,11 @@ void loop()
     for (int i = 28; i > 0; i--)
     {
         if (years[i] != 0) {
-            int realAngle = 180-angles[i];
+            int realAngle = 183-angles[i];
             myServo.write(realAngle);
             matrix.print(years[i]);
             matrix.writeDisplay();
-            delay(5000);
+            delay(1000);
         }
     }
 }
