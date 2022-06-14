@@ -25,19 +25,16 @@ void setup()
 
     // Sets up the feedback servo
     servo.setServoControl(SERVO_PIN);
-    servo.setKp(1);
+    servo.setKp(0.01);
     Serial.begin(115200);
+
+    servo.rotate(-1, 0);
+    servo.setKp(0.0001);
 }
 
 void loop()
 {
-    servo.rotate(270, 4);
 	matrix.print(servo.Angle(), DEC);
-    matrix.writeDisplay();
-    delay(1000);
-
-    servo.rotate(-180, 4);
-    matrix.print(servo.Angle(), DEC);
     matrix.writeDisplay();
     delay(1000);
 }
