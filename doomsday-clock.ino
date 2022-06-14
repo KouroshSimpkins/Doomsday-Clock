@@ -58,7 +58,7 @@ void setup()
     // Sets up the feedback servo
     myServo.attach(SERVO_PIN);
     myServo.write(197);
-    delay(1000);
+    delay(10000);
 }
 
 
@@ -120,7 +120,7 @@ void loop()
             myServo.write(realAngle);
             matrix.print(years[i]);
             matrix.writeDisplay();
-            delay(1000);
+            delay(5000);
         }
     }
 }
